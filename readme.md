@@ -16,7 +16,6 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - insegnanti
 - esami (o appelli?)
 - studenti
-- voti
 
 *dipartimenti*
 - ID (BIGINT AI) | NOTNULL
@@ -53,6 +52,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - data | DATETIME | NOTNULL
 - indirizzo_sede | VARCHAR(30) | NOTNULL
 - tipo_esame | VARCHAR(7) | NOTNULL (es. orale o scritto)
+- voto
 
 *studenti*
 - ID (BIGINT AI) | NOTNULL
@@ -62,7 +62,3 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - email | VARCHAR(20) | NOTNULL
 - numero_matricola | INT | NOTNULL
 - esami_passati? | NULL
-
-*voti*
-- ID (BIGINT AI) | NOTNULL
-- voto | TINYINT | NOTNULL
