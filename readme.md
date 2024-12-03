@@ -26,17 +26,19 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 *corsi_laurea*
 - ID (BIGINT AI) | NOTNULL
 - dipartimento_id | NOTNULL
-- nome |  VARCHAR(50) | NOTNULL
+- nome | VARCHAR(50) | NOTNULL
 - tipo_laurea | VARCHAR(20) | NOTNULL
 
 *corsi*
 - ID (BIGINT AI) | NOTNULL
 - corso_laurea_id | NOTNULL
 - insegnante_id | NOTNULL
-- nome |  VARCHAR(20) | NOTNULL
+- nome | VARCHAR(20) | NOTNULL
 - numero_crediti | TINYINT | NOTNULL
 - obbligatorio (boolean) | TINYINT | DEFAULT(0)
 - tipologia_corso | CHAR(1) | NOTNULL (es. corso di tipo A: corso in presenza)
+- durata | | varchar(12) | NOTNULL
+- indirizzo_sede | | varchar(30) | NOTNULL
 
 *insegnanti*
 - ID (BIGINT AI) | NOTNULL
@@ -45,14 +47,15 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - email | VARCHAR(20) | NOTNULL
 - numero_telefono | BIGINT | NOTNULL
 
-*esami*
+*appelli_esami*
 - ID (BIGINT AI) | NOTNULL
 - corso_id | NOTNULL
 - insegnante_id | NOTNULL
 - data | DATETIME | NOTNULL
 - indirizzo_sede | VARCHAR(30) | NOTNULL
 - tipo_esame | VARCHAR(7) | NOTNULL (es. orale o scritto)
-- voto
+- voto | TINYINT | NOTNULL
+
 
 *studenti*
 - ID (BIGINT AI) | NOTNULL
@@ -61,4 +64,3 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - cognome | VARCHAR(30) | NOTNULL
 - email | VARCHAR(20) | NOTNULL
 - numero_matricola | INT | NOTNULL
-- esami_passati? | NULL
