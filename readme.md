@@ -19,48 +19,50 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - voti
 
 *dipartimenti*
-- ID (BIGINT AI)
-- nome
-- indirizzo_sede
-- direttore_id?
+- ID (BIGINT AI) | NOTNULL
+- nome | VARCHAR(50) | NOTNULL
+- indirizzo_sede | VARCHAR(30) | NOTNULL
+- direttore_id? | NULL
 
 *corsi_laurea*
-- ID (BIGINT AI)
-- dipartimento_id
-- nome
-- tipo_laurea
+- ID (BIGINT AI) | NOTNULL
+- dipartimento_id | NOTNULL
+- nome |  VARCHAR(50) | NOTNULL
+- tipo_laurea | VARCHAR(20) | NOTNULL
 
 *corsi*
-- ID (BIGINT AI)
-- corso_laurea_id
-- insegnante_id
-- crediti
-- obbligatorio (boolean)
-- tipologia_corso
+- ID (BIGINT AI) | NOTNULL
+- corso_laurea_id | NOTNULL
+- insegnante_id | NOTNULL
+- nome |  VARCHAR(20) | NOTNULL
+- numero_crediti | TINYINT | NOTNULL
+- obbligatorio (boolean) | TINYINT | DEFAULT(0)
+- tipologia_corso | CHAR(1) | NOTNULL (es. corso di tipo A: corso in presenza)
 
 *insegnanti*
-- ID (BIGINT AI)
-- nome
-- cognome
-- email
-- numero_telefono
+- ID (BIGINT AI) | NOTNULL
+- nome | VARCHAR(20) | NOTNULL
+- cognome | VARCHAR(30) | NOTNULL
+- email | VARCHAR(20) | NOTNULL
+- numero_telefono | BIGINT | NOTNULL
 
 *esami*
-- ID (BIGINT AI)
-- corso_id
-- insegnante_id
-- data
-- indirizzo_sede
-- tipo_esame
+- ID (BIGINT AI) | NOTNULL
+- corso_id | NOTNULL
+- insegnante_id | NOTNULL
+- data | DATETIME | NOTNULL
+- indirizzo_sede | VARCHAR(30) | NOTNULL
+- tipo_esame | VARCHAR(7) | NOTNULL (es. orale o scritto)
 
 *studenti*
-- ID (BIGINT AI)
-- corso_laurea_id
-- nome
-- cognome
-- numero_matricola
-- esami_passati?
+- ID (BIGINT AI) | NOTNULL
+- corso_laurea_id | NOTNULL
+- nome | VARCHAR(20) | NOTNULL
+- cognome | VARCHAR(30) | NOTNULL
+- email | VARCHAR(20) | NOTNULL
+- numero_matricola | INT | NOTNULL
+- esami_passati? | NULL
 
 *voti*
-- ID (BIGINT AI)
-- voto
+- ID (BIGINT AI) | NOTNULL
+- voto | TINYINT | NOTNULL
