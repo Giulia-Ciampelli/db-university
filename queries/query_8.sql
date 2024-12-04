@@ -1,3 +1,2 @@
-SELECT *
-FROM `teachers`
-WHERE `phone` IS NULL;
+SELECT COUNT(*)
+FROM  `departments`;

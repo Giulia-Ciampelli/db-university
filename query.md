@@ -31,10 +31,10 @@ FROM `degrees`
 WHERE `level` = 'magistrale';
 
 *query 7*
-SELECT COUNT('id')
+SELECT COUNT(*)
 FROM  `departments`;
 
 *query 8*
-SELECT *
+SELECT COUNT(*)
 FROM `teachers`
 WHERE `phone` IS NULL;
