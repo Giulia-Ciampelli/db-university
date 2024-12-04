@@ -32,13 +32,12 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 *corsi*
 - ID (BIGINT AI) | NOTNULL
 - corso_laurea_id | NOTNULL
-- insegnante_id | NOTNULL
 - nome | VARCHAR(20) | NOTNULL
 - numero_crediti | TINYINT | NOTNULL
 - obbligatorio (boolean) | TINYINT | DEFAULT(0)
 - tipologia_corso | CHAR(1) | NOTNULL (es. corso di tipo A: corso in presenza)
-- durata | | varchar(12) | NOTNULL
-- indirizzo_sede | | varchar(30) | NOTNULL
+- durata | VARCHAR(12) | NOTNULL
+- indirizzo_sede | VARCHAR(30) | NOTNULL
 
 *insegnanti*
 - ID (BIGINT AI) | NOTNULL
@@ -54,8 +53,6 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - data | DATETIME | NOTNULL
 - indirizzo_sede | VARCHAR(30) | NOTNULL
 - tipo_esame | VARCHAR(7) | NOTNULL (es. orale o scritto)
-- voto | TINYINT | NOTNULL
-
 
 *studenti*
 - ID (BIGINT AI) | NOTNULL
