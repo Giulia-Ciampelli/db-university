@@ -47,3 +47,7 @@ VALUES (1, 'Giulia', 'Ciampelli', '1996-05-25', 'GGGCCC00G11B777P', '2024-12-04'
 UPDATE teachers
 SET office_number = 126
 WHERE id = 56;
+
+*query 11*
+DELETE FROM students
+WHERE id = 5001;
