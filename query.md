@@ -33,3 +33,8 @@ WHERE `level` = 'magistrale';
 *query 7*
 SELECT *
 FROM `departments`;
+
+*query 8*
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
