@@ -31,8 +31,8 @@ FROM `degrees`
 WHERE `level` = 'magistrale';
 
 *query 7*
-SELECT *
-FROM `departments`;
+SELECT COUNT('id')
+FROM  `departments`;
 
 *query 8*
 SELECT *
