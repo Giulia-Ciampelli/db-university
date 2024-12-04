@@ -29,3 +29,7 @@ AND date = '2020-06-20';
 SELECT *
 FROM `degrees`
 WHERE `level` = 'magistrale';
+
+*query 7*
+SELECT *
+FROM `departments`;
