@@ -1,2 +1,3 @@
 SELECT COUNT(*)
-FROM  `departments`;
+FROM `teachers`
+WHERE `phone` IS NULL;
