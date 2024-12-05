@@ -142,4 +142,4 @@ FROM `students`
 JOIN `exam_student` ON `exam_student`.`student_id` = `students`.`id`
 JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
 GROUP BY `student_name`, `student_surname`
-WHERE `highest_vote` >= 18;
+HAVING `highest_vote` >= 18;
