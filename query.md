@@ -51,3 +51,12 @@ WHERE id = 56;
 *query 11*
 DELETE FROM students
 WHERE id = 5001;
+
+## GROUP BY
+
+*query 1*
+SELECT COUNT(*) AS `total_students`, YEAR(`enrolment_date`) AS `year_of_enrolment`
+FROM `students`
+GROUP BY `year_of_enrolment`;
+
+## JOIN
