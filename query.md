@@ -65,6 +65,9 @@ FROM `teachers`
 GROUP BY `office_address`;
 
 *query 3*
+SELECT AVG(`vote`) AS `average_vote`, `exam_id`
+FROM `exam_student`
+GROUP BY `exam_id`;
 
 *query 4*
 
