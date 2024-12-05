@@ -88,6 +88,13 @@ ON `students`.`degree_id` = `degrees`.`id`
 WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
 
 *query 2*
+SELECT `degrees`.*,
+`departments`.`name` AS `department_name`
+FROM `departments`
+JOIN `degrees`
+ON `degrees`.`department_id` = `departments`.`id`
+WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
+AND `degrees`.`level` = 'magistrale';
 
 *query 3*
 
