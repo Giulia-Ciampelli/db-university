@@ -70,6 +70,12 @@ FROM `exam_student`
 GROUP BY `exam_id`;
 
 *query 4*
+SELECT COUNT(`degrees`.`id`) AS `degree_count`,
+`departments`.`name`
+FROM `departments`
+JOIN `degrees`
+ON `departments`.`id` = `degrees`.`department_id`
+GROUP BY `departments`.`id`, `departments`.`name`;
 
 ## JOIN
 
