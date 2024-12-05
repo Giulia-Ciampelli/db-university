@@ -74,6 +74,12 @@ GROUP BY `exam_id`;
 ## JOIN
 
 *query 1*
+SELECT `students`.*,
+`degrees`.`name` AS `degree_name`
+FROM `students`
+JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
 
 *query 2*
 
